@@ -1,0 +1,84 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.content-text {
+  text-align: justify;
+}
+
+section {
+  min-height: 80vh;
+}
+
+/* footer */
+footer {
+  position: static;
+  bottom: 0;
+  background-color: #222831;
+  color: white;
+}
+
+/* carousel */
+#wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-width: 1000px; /* Batas lebar maksimal */
+  margin: auto;
+}
+
+#carousel {
+  display: flex;
+  align-items: center;
+}
+
+#content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* item gambar */
+.item {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* tombol navigasi */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(163, 160, 160, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .item {
+    min-width: 100%;
+  }
+
+  button {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    padding: 2px;
+  }
+}
