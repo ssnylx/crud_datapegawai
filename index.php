@@ -29,7 +29,7 @@
       <div class="collapse navbar-collapse justify-content-end gap-4" id="navbarSupportedContent">
         <ul class="navbar-nav gap-4">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="coba.php">Beranda</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Beranda</a>
         </li>
           <li class="nav-item">
             <a class="nav-link active" href="#ttg">Tentang</a>
