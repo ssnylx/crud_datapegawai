@@ -6,7 +6,6 @@ $id = $_GET["id"];
 
 // query data mahasiswa berdasarkan id
  $pegawai = query("SELECT * FROM tb_pegawai WHERE pegawai_id = $id")[0];
-
 // cek apakah tombol submit sudah ditekan atau blm
 if(isset($_POST["submit"])){
 

@@ -1,9 +1,7 @@
 <?php
 require 'functions.php';
-
 // cek apakah tombol submit sudah ditekan atau blm
 if(isset($_POST["submit"])){
-
     // cek apakah data berhasil ditambahkan atau tidak
     if( tambah($_POST) > 0  ){
         echo "
@@ -21,7 +19,6 @@ if(isset($_POST["submit"])){
         ";
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

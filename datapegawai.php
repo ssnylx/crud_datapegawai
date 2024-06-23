@@ -1,5 +1,4 @@
 <?php
-
 // memanggil functions
 require 'functions.php';
 
@@ -9,7 +8,6 @@ $pegawai = query("SELECT * FROM tb_pegawai");
 if( isset($_POST["cari"])){
     $pegawai = cari($_POST["keyword"]);
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
