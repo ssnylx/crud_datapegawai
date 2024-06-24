@@ -1,35 +1,32 @@
-$(document).ready(function () {
-  const $prevButton = $('#prev');
-  const $nextButton = $('#next');
-  const $content = $('#content');
-  const $items = $('.item');
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.getElementById('carousel');
+  const content = document.getElementById('content');
+  const items = document.querySelectorAll('.item');
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
 
   let currentIndex = 0;
+  const itemCount = items.length;
+  const itemWidth = items[0].clientWidth;
 
   function updateCarousel() {
-    const itemWidth = $items.eq(currentIndex).outerWidth();
-    $content.css('transform', `translateX(-${itemWidth * currentIndex}px)`);
+    content.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
   }
 
-  $prevButton.on('click', function () {
+  prevButton.addEventListener('click', function () {
     if (currentIndex > 0) {
       currentIndex--;
       updateCarousel();
     }
   });
 
-  $nextButton.on('click', function () {
-    if (currentIndex < $items.length - 1) {
+  nextButton.addEventListener('click', function () {
+    if (currentIndex < itemCount - 1) {
       currentIndex++;
       updateCarousel();
     }
   });
 
-  // Perbarui carousel saat ukuran jendela berubah
-  $(window).on('resize', function () {
-    updateCarousel();
-  });
-
-  // Jalankan fungsi updateCarousel untuk inisialisasi
+  // Initial update
   updateCarousel();
 });
